@@ -34,3 +34,5 @@ EOT
 openssl req -newkey rsa:4096 -keyout myKey.pem -out myCSR.csr -nodes -subj "/CN=${DOMAIN}"
 openssl x509 -signkey myKey.pem -in myCSR.csr -req -days 365 -out cert.pem
 openssl pkcs12 -export -out cert.p12 -inkey myKey.pem -in cert.pem -password pass:"${NEXT_PRIVATE_SIGNING_PASSPHRASE}" -legacy
+
+chmod 777 ./cert.p12
