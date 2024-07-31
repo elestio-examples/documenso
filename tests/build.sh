@@ -2,4 +2,4 @@
 
 cp -r ./docker/* ./
 
-docker buildx build . --output type=docker,name=elestio/documenso:latest | docker load
+docker buildx build . --output type=docker,name=elestio4test/documenso:latest | docker load
