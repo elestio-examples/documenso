@@ -15,7 +15,7 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
   documenso:
-    image: documenso/documenso:${SOFTWARE_VERSION_TAG}
+    image: elestio4test/documenso:${SOFTWARE_VERSION_TAG}
     depends_on:
       - database
     environment:
