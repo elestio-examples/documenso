@@ -60,6 +60,8 @@ services:
       - NEXT_PRIVATE_SIGNING_PASSPHRASE=${NEXT_PRIVATE_SIGNING_PASSPHRASE}
     ports:
       - 172.17.0.1:31264:3000
+    extra_hosts:
+      DOMAIN_TO_CHANGE: 172.17.0.1
     volumes:
       - ./cert.p12:/opt/documenso/cert.p12
 
