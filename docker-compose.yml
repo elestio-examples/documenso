@@ -16,6 +16,7 @@ services:
 
   documenso:
     image: documenso/documenso:${SOFTWARE_VERSION_TAG}
+    restart: always
     depends_on:
       - database
     environment:
